@@ -53,14 +53,14 @@ export const Sidebar = () => {
               <ListItemText primary="Kasir" />
             </ListItemButton>
           </ListItem>
-          <ListItem disablePadding className={styles.listButtonLogin}>
+          {/* <ListItem disablePadding className={styles.listButtonLogin}>
             <ListItemButton component={Link} to="/">
               <ListItemIcon>
                 <PersonIcon />
               </ListItemIcon>
               <ListItemText primary="Log Out" />
             </ListItemButton>
-          </ListItem>
+          </ListItem> */}
         </List>
       </nav>
     </div>
