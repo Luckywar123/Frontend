@@ -52,7 +52,11 @@ export const Kasir = () => {
         console.error('No products in the table to add.');
         return;
       }
-  
+      if (response.status === 200) {
+        alert("Return item added successfully");
+        // Update the frontend display if needed
+        // For example, you might refresh the product list or adjust the SKU stock display
+      }
       const currentDate = new Date().toISOString().split('T')[0]; // Get the current date
       const idTransaksi = await fetchLatestIdTransaksi();
 
