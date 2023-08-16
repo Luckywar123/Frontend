@@ -52,14 +52,9 @@ export const Kasir = () => {
         console.error('No products in the table to add.');
         return;
       }
-      if (response.status === 200) {
-        alert("Return item added successfully");
-        // Update the frontend display if needed
-        // For example, you might refresh the product list or adjust the SKU stock display
-      }
+      
       const currentDate = new Date().toISOString().split('T')[0]; // Get the current date
       const idTransaksi = await fetchLatestIdTransaksi();
-
   
       if (idTransaksi === null) {
         console.error('No transactions found.');
@@ -76,14 +71,12 @@ export const Kasir = () => {
           tanggal: currentDate,
           jumlah: row.jumlah,
           idBarang: row.Sku.product.idBarang,
-          idSKU:row.idSKU ,
+          idSKU: row.idSKU,
           idTransaksi: row.idTransaksi,
           jenisTransaksi: 'Penjualan',
         };
       });
-
-    
-      // console.log(transactionItems);
+  
       const validHistoryItems = await Promise.all(historyItems);
       const filteredHistoryItems = validHistoryItems.filter(item => item !== null); // Remove null items
   
@@ -95,19 +88,22 @@ export const Kasir = () => {
       const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/insert-history`, {
         items: validHistoryItems,
       });
-      console.log(response);
   
-      if (response.status === 500) {
-        console.log('Transaction added to history successfully.', response);
+      if (response.status === 200) {
+        console.log('Transaction added to history successfully.');
         setDatarows([]); // Clear the table after adding to history
         fetchKasirData(); // Refresh the table
+        alert('Transaction added successfully!'); // Show success message
       } else {
         console.error('Error adding transactions to history:', response.data.error);
+        alert('Error adding transactions to history. Please try again.'); // Show error message
       }
     } catch (error) {
       console.error('Error adding transactions to history:', error);
+      alert('An error occurred while adding transactions to history. Please try again.'); // Show error message
     }
   };
+  
   
   const fetchLatestIdTransaksi = async () => {
     try {
