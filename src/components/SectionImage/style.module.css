@@ -1,0 +1,12 @@
+.section {
+    width: 100%;
+    position: relative;
+  }
+  
+  .section img {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }

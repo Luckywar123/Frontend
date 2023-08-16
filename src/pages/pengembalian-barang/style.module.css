@@ -1,0 +1,14 @@
+.title{
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.bodyContent{
+    margin-left: 110px;
+}
+.buttonTambah{
+    margin-bottom: 50px;
+    margin-top: 50px;
+}

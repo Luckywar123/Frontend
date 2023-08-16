@@ -1,0 +1,100 @@
+.paper{
+    margin-top: 20px;
+    position: fixed !important;
+    top:80% !important;
+    background-color: aqua;
+
+}
+
+.title{
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.headTable{
+    background-color: #04D700 !important;
+}
+
+.textKasir{
+    text-align: center;
+    font-weight: 600 !important;
+    margin-top: 0px !important;
+}
+
+.jumlahBadge{
+    background-color: #D9D9D9;
+    border-radius: 20px;
+
+}
+
+.container{
+    margin-left: 130px;
+    text-align: center;
+}
+
+.containerKasir{
+    background-color: #AEDBCE;
+    border-radius: 20px;
+    padding: 0px 20px 15px!important;
+    margin-top: 35px;
+}
+
+.sign{
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    align-items: center;
+}
+.box{
+    padding: 15px 10px 15px !important;
+    background-color: white !important;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.boxSign{
+    padding: 15px 10px 15px 10px !important;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.textUang1{
+    text-align: center;
+    font-weight: 600;
+    font-size: larger;
+    color: #04D700;
+    margin: 0px !important;
+    padding: 10px 0px 10px 0px;
+}
+
+.textUang2{
+    text-align: center;
+    font-weight: 600;
+    font-size: larger;
+    margin: 0px !important;
+    padding: 10px 0px 10px 0px;
+}
+.beli{
+    background-color: #4287d1 ;
+    width: 200px;
+    height: 30px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+.addButtonContainer {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+  }
+  .namaBarang{
+    width: 500px;
+  }
+  
