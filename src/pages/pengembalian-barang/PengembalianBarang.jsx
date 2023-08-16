@@ -121,8 +121,7 @@ export const PengembalianBarang = () => {
     <div className={styles.content}>
       <div className={styles.title}>Pengembalian Barang</div>
       <div className={styles.bodyContent}>
-
-        </div>
+        
         <TableContainer component={Paper}>
           <Table aria-label="simple table">
             <TableHead className={styles.rowHead}>
