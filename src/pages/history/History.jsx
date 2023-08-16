@@ -57,12 +57,12 @@ export const History = () => {
 
     const columns = ["ID History", "Tanggal", "Nama Barang", "Jumlah (Box)", "SKU", "Jenis Transaksi"];
     const rows = filteredData.map(row => [
-      row["ID History"],
+      row.idHistory,
       row["Tanggal"],
       row["Nama Barang"],
-      row["Jumlah (Box)"],
+      row.jumlah,
       row.SKU,
-      row["Jenis Transaksi"]
+      row.jenis_transaksi,
     ]);
   
     // Add the table using the autoTable function
