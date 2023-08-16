@@ -121,19 +121,7 @@ export const PengembalianBarang = () => {
     <div className={styles.content}>
       <div className={styles.title}>Pengembalian Barang</div>
       <div className={styles.bodyContent}>
-        <div className={styles.buttonTambah}>
-          <Button
-            style={{
-              background: 'linear-gradient(#D3EBCD, #B1E9A3)',
-              color: '#000000',
-              fontWeight: 'bold',
-              paddingLeft: '35px',
-              paddingRight: '35px',
-              borderRadius: '100px',
-            }}
-          >
-            + Tambah
-          </Button>
+
         </div>
         <TableContainer component={Paper}>
           <Table aria-label="simple table">

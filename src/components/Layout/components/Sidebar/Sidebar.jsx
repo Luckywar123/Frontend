@@ -58,7 +58,7 @@ export const Sidebar = () => {
               <ListItemIcon>
                 <PersonIcon />
               </ListItemIcon>
-              <ListItemText primary="Login" />
+              <ListItemText primary="Log Out" />
             </ListItemButton>
           </ListItem>
         </List>
