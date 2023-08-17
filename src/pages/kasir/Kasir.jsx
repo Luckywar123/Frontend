@@ -91,13 +91,14 @@ export const Kasir = () => {
   
       if (response.status === 200) {
         console.log('Transaction added to history successfully.');
-        setDatarows([]); // Clear the table after adding to history
-        fetchKasirData(); // Refresh the table
+         // Refresh the table
   
         // After successfully adding to history, send a request to the clear-kasir endpoint
         const clearResponse = await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/clear-kasir`);
         if (clearResponse.status === 200) {
           console.log('Kasir data cleared successfully.');
+          setDatarows([]); // Clear the table after adding to history
+          fetchKasirData();
         } else {
           console.error('Error clearing Kasir data:', clearResponse.data.error);
         }
