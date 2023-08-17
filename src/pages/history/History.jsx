@@ -68,7 +68,7 @@ export const History = () => {
     // Add the table using the autoTable function
     pdf.autoTable({
       head:[columns],
-      body: rows,
+      body: [rows],
       startY:20  // Adjust the starting position
     });
     pdf.save("history_data.pdf");
@@ -145,7 +145,6 @@ export const History = () => {
             </TableBody>
             <TableFooter className={styles.rowFooter}>
               <TableCell colSpan={6} align="right">
-                {/* Pagination component or other footer content */}
               </TableCell>
             </TableFooter>
           </Table>
