@@ -22,6 +22,20 @@
     border-radius: 20px !important;
     margin:30px;
 }
-  .buttonTambah{
+.buttonTambah{
     margin-top: 10px;
+}
+.formContent.bodyContent{
+  margin-top: 30px !important;
+  white-space: nowrap;
+  overflow: hidden;
+text-overflow: ellipsis;
+}
+
+.popup{
+    flex:column !important;
+    flex-grow: 10 !important;
+    margin-top: 30px !important;
+    white-space: nowrap;
+    overflow: hidden;
 }
