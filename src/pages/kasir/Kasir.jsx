@@ -93,7 +93,16 @@ export const Kasir = () => {
         console.log('Transaction added to history successfully.');
         setDatarows([]); // Clear the table after adding to history
         fetchKasirData(); // Refresh the table
-        alert('Transaction added successfully!'); // Show success message
+  
+        // After successfully adding to history, send a request to the clear-kasir endpoint
+        const clearResponse = await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/clear-kasir`);
+        if (clearResponse.status === 200) {
+          console.log('Kasir data cleared successfully.');
+        } else {
+          console.error('Error clearing Kasir data:', clearResponse.data.error);
+        }
+  
+        alert('Transaction added successfully and Kasir data cleared!'); // Show success message
       } else {
         console.error('Error adding transactions to history:', response.data.error);
         alert('Error adding transactions to history. Please try again.'); // Show error message
@@ -103,6 +112,7 @@ export const Kasir = () => {
       alert('An error occurred while adding transactions to history. Please try again.'); // Show error message
     }
   };
+  
   
   
   
