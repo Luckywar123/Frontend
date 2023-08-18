@@ -19,6 +19,7 @@ import {
   DialogActions
 } from '@mui/material';
 import { Pagination } from '../../components/Pagination';
+//import Chart from 'charrt.js/auto';
 
 export const ProductInventory = () => {
   const [rows, setRows] = useState([]);
